@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player Page</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-button.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-pause.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="banner">
+    <h1>Howdy' biker!</h1>
+  </div>
+  <ul>
+    <li>
+      <div class="radio-group">
+        <button class="radio-button" onclick="playRadio('http://172.16.3.65:8080/music')"><i class="gg-play-button"></i></button>
+        <p>Play music</p>
+    </div>
+    </li>
+    <br>
+    <li  id="black" >
+        <div class="radio-group">
+          <button class="radio-button" onclick="playRadio('http://172.16.3.65:8080/country')"><i class="gg-play-button"></i></button>
+          <p>Play countryman</p>
+      </div>
+    </li>
+    <br>
+    <li>
+      <div class="radio-group">
+        <button class="radio-button" onclick="playRadio('http://172.16.3.65:8080/news')"><i class="gg-play-button"></i></button>
+        <p>Play news</p>
+    </div>
+    </li>
+    <br>
+    <li id="black">
+      <div class="radio-group">
+        <button class="radio-button" onclick="playRadio('http://172.16.3.65:8080/podcast')"><i class="gg-play-button"></i></button>
+        <p>Play podcast</p>
+    </div>
+    </li><br>
+    <li>
+      <div class="radio-group">
+        <button class="radio-stop" onclick="stopRadio()"><i class="gg-play-pause"></i></button>
+        <p>Stop</p>
+    </div>
+    </li>
+  </ul>
+  
+  <script>
+    var audio; // Declare the audio variable globally
+
+    function preloadRadio(streamUrl) {
+            audio = new Audio(streamUrl);
+            audio.preload = 'auto';
+        }
+
+    function playRadio(streamUrl) {
+        // Stop any currently playing audio before starting a new one
+        stopRadio();
+
+        // Create an audio element
+        audio = new Audio(streamUrl);
+
+        // Play the audio
+        audio.play();
+    }
+
+    function stopRadio() {
+        // Check if there is a currently playing audio
+        if (audio) {
+            // Pause and reset the audio
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    }
+</script>
+
+</body>
+</html>

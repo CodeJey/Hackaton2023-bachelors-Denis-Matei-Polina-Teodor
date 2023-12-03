@@ -1,0 +1,109 @@
+body {
+  background-image: url("https://gudgear.com/wp-content/uploads/2018/02/cool-bike-accessories.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fdfde0; /* white/beige background */
+  font-family: Arial, sans-serif;
+  margin: auto;
+}
+
+.banner {
+  opacity: 90%;
+  background-color: orange;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inneraudio{
+  padding: 12px;
+  margin: auto;
+}
+
+ul{
+  display: inline;
+  margin: auto;
+}
+li {
+  opacity: 90%;
+  border: 0px solid;
+  border-radius: 5px;
+  background: rgb(99, 99, 99); 
+  list-style-type: none;
+  width: 100%;
+  align-items: center; 
+}
+li:nth-child(odd) { background: rgb(158, 151, 151); }
+
+.footer { 
+  height: 90px;
+  background-color: orange;
+  position: absolute; 
+  text-align: center;
+  padding: 10px;
+  opacity: 85%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline;
+  width: 100%;
+  bottom: 0; 
+  left: 0; 
+  z-index: 10;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  height: 110px;
+}
+
+.radio-button {
+  border-radius: 70px;
+  background-color: orange;
+  color: rgb(0, 0, 0);
+  padding: 20px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.gg-play-button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+}
+
+p{
+  font-size: 30px;
+}
+
+#black{
+  background-color: rgb(94, 94, 94);
+}
+
+.gg-play-pause {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border-left: 3px solid;
+  border-right: 3px solid
+}
+
+.radio-stop {
+  border-radius: 70px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 26px 26px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
